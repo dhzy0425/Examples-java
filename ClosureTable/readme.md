@@ -5,7 +5,11 @@
 基本用法：
 
 ```java
-SqlSessionFactory sessionFactory = getMySqlSessionFactory(); //创建Mybatis的SessionFactory
+/*
+ * 创建Mybatis的SessionFactory,getMySqlSessionFactory方法需要你自己去实现
+ * 或者参考CategoryStoreTest.init()
+ */
+SqlSessionFactory sessionFactory = getMySqlSessionFactory(); 
 Utils.executeScript(sessionFactory.openSession().getConnection(), "table.sql"); //运行建表脚本
 
 session = sessionFactory.openSession();
